@@ -1,29 +1,28 @@
 #include <iostream>
-#include "CreditCard.h"
-
+#include "CreditCard.hpp"
 using namespace std;
 
 int main() {
 
     cout << "\n********************* PART 2 *********************\n\n";
 
-//    CreditCard card1{"5469 7455 5465 5424", "12/2023"};
-//    CreditCard card2{"9378-1235-2313-2222", "03/2025", 42};
-//    CreditCard card3{"3554//2343//3223//2132", card2};
-//    CreditCard card4{"       7231         3543       8786    2154             ", card2, 123};
+    CreditCard card1("5469 7455 5465 5424", "12/2023");
+    CreditCard card2("9378-1235-2313-2222", "03/2025", 42);
+    CreditCard card3("3554//2343//3223//2132", card2);
+    CreditCard card4("       7231         3543       8786    2154             ", card2, 123);
 
     cout << "\n********************* PART 3 *********************\n\n";
 
-//    cout << card1 << endl;
-//    cout << card2 << endl;
-//    cout << card3 << endl;
-//    cout << card4 << endl;
-//
-//    cin >> card1;
-//    cout << card1 << endl;
-//
-//    cin >> card2;
-//    cout << card2;
+    cout << card1 << endl;
+    cout << card2 << endl;
+    cout << card3 << endl;
+    cout << card4 << endl;
+
+    cin >> card1;
+    cout << card1 << endl;
+
+    cin >> card2;
+    cout << card2;
 
     cout << "\n********************* PART 4 *********************\n\n";
 
