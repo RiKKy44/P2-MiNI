@@ -54,3 +54,15 @@ bool CreditCard::operator<(const CreditCard& other) const{ // both < and >= oper
 bool CreditCard::operator>=(const CreditCard& other) const{
     return !(*this<other);
 }
+
+void CreditCard::BuyItem(string item){
+    int price = item.size();
+    this->balance-=price;
+    this->item = item;
+}
+
+void CreditCard::BuyItem(int n){
+    for (int i=0;i<n;i++){
+        BuyItem(item);
+    }
+}

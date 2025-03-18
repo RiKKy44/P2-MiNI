@@ -22,5 +22,9 @@ public:
     bool operator<(const CreditCard& other) const;
 
     bool operator>=(const CreditCard& other) const;
+
+    void BuyItem(string item);
+
+    void BuyItem(int n);
 };
 string clean_number(string& number);

@@ -36,13 +36,13 @@ int main() {
 
     cout << "\n********************* PART 5 *********************\n\n";
 
-//    cout << card1 << endl;
-//    cout << "Buying a PlayStation" << endl;
-//    card1.BuyItem("PlayStation");
-//    cout << card1 << endl;
-//    cout << "Buying a PlayStation 5 times" << endl;
-//    card1.BuyItem(5);
-//    cout << card1;
+    cout << card1 << endl;
+    cout << "Buying a PlayStation" << endl;
+    card1.BuyItem("PlayStation");
+    cout << card1 << endl;
+    cout << "Buying a PlayStation 5 times" << endl;
+    card1.BuyItem(5);
+    cout << card1;
 
     cout << "\n********************* PART 6 *********************\n\n";
 
