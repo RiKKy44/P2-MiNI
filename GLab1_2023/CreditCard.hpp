@@ -18,5 +18,9 @@ public:
     friend ostream& operator<<(ostream& out, const CreditCard& card);
 
     friend istream& operator>>(istream& in, CreditCard& card);
+
+    bool operator<(const CreditCard& other) const;
+
+    bool operator>=(const CreditCard& other) const;
 };
 string clean_number(string& number);

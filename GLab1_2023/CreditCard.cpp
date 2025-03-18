@@ -16,7 +16,7 @@ CreditCard:: CreditCard(string number, const CreditCard& card, int balance):bala
     item = card.item;
 }
 
-string clean_number(string& number){
+string clean_number(string& number){ // helper function to clean credit card number
     string temp = "";
     for (char c:number){
         if(isdigit(c)){
@@ -25,13 +25,13 @@ string clean_number(string& number){
     }
     return temp;
 } 
-ostream& operator<<(ostream& out, const CreditCard& card){
+ostream& operator<<(ostream& out, const CreditCard& card){ // cout operator
     cout<<card.number<<" - "<<card.month<<"/"<<card.year<<'\n';
     cout<<"Balance: "<<card.balance<<'\n';
     cout<<"Last bought item: "<<card.item<<'\n';
     return out;
 }
-istream& operator>>(istream& in, CreditCard& card){
+istream& operator>>(istream& in, CreditCard& card){ // cin operator
     string month,year,item;
     int balance;
     cout<<"New expiration date (month): ";
@@ -41,5 +41,16 @@ istream& operator>>(istream& in, CreditCard& card){
     std::cout << "Enter last bought item: ";
     in.ignore();
     getline(in, card.item); 
+    cout<<'\n';
     return in;
+}
+
+bool CreditCard::operator<(const CreditCard& other) const{ // both < and >= operators compare two CreditCard objects by expiration date
+    if (this->year<other.year) return true;
+    if (this->year==other.year && this->month<other.month) return true;
+    return false;
+}
+
+bool CreditCard::operator>=(const CreditCard& other) const{
+    return !(*this<other);
 }

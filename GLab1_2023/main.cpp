@@ -26,13 +26,13 @@ int main() {
 
     cout << "\n********************* PART 4 *********************\n\n";
 
-//    if (card1 < card2) {
-//        cout << "Card 1 has an earlier expiration date than Card 2" << endl;
-//    }
-//
-//    if (card1 >= card2) {
-//        cout << "Card 1 has a greater or equal expiration date than Card 2" << endl;
-//    }
+    if (card1 < card2) {
+        cout << "Card 1 has an earlier expiration date than Card 2" << endl;
+    }
+
+    if (card1 >= card2) {
+        cout << "Card 1 has a greater or equal expiration date than Card 2" << endl;
+    }
 
     cout << "\n********************* PART 5 *********************\n\n";
 
