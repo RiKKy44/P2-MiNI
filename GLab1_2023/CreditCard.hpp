@@ -26,5 +26,9 @@ public:
     void BuyItem(string item);
 
     void BuyItem(int n);
+
+    CreditCard& operator+=(int months);
+
+    CreditCard& operator+=(const CreditCard& other);
 };
 string clean_number(string& number);

@@ -46,10 +46,10 @@ int main() {
 
     cout << "\n********************* PART 6 *********************\n\n";
 
-//    card1 += 10;
-//    cout << card1 << endl;
-//    card1 += card2;
-//    cout << card1 << endl;
+    card1 += 10;
+    cout << card1 << endl;
+    card1 += card2;
+    cout << card1 << endl;
 
     return 0;
 }

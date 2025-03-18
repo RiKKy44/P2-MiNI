@@ -66,3 +66,18 @@ void CreditCard::BuyItem(int n){
         BuyItem(item);
     }
 }
+CreditCard& CreditCard::operator+=(int months){
+    month +=months;
+    while(month>12){
+        month-=12;
+        year++;
+    }
+    return *this;
+}
+CreditCard& CreditCard::operator+=(const CreditCard& other){
+    if (other.year>year || (other.year==year)&&other.month>month){
+        month = other.month;
+        year = other.year;
+    }
+    return *this;
+}
